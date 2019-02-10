@@ -1,0 +1,45 @@
+{
+  "name": "puppet",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "serve": "node dist/www.js",
+    "build": "babel src --out-dir dist",
+    "production": "webpack --mode production",
+    "development": "webpack --mode development",
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "start": "nodemon --delay 1500ms --exec babel-node ./bin/www.js",
+    "server": "nodemon --delay 2000ms --exec npm run babel-node -- $NODE_DEBUG_OPTION ./bin/www.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "jsdom": "^13.2.0",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "puppeteer": "^1.12.1",
+    "puppeteer-extra": "^2.1.1",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.1.1",
+    "puppeteer-extra-plugin-stealth": "^2.1.6",
+    "puppeteer-extra-plugin-user-data-dir": "^2.1.1",
+    "puppeteer-extra-plugin-user-preferences": "^2.1.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "webpack": "^4.29.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
